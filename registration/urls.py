@@ -21,5 +21,5 @@ urlpatterns = [
      url(r'^bulk/$', StudentBulkUploadView.as_view(), name='register_student_bulk'),
      url(r'^bulk/handle/$', views.handle_student_upload, name='upload_students'),
      url(r'^list/$', StudentListView.as_view(), name='list'),
-     url(r'^profile/edit/(?P<stud_id>\d+)/$', StudentListUpdateView.as_view(), name='student_profile_update'),
+     url(r'^profile/edit/(?P<aums_id>[\w|\W]+)/$', StudentListUpdateView.as_view(), name='student_profile_update'),
     ]

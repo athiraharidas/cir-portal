@@ -83,8 +83,7 @@ class StudentManager(models.Manager):
 
 
 class Student(models.Model):
-    stud_id = models.AutoField(primary_key=True)
-    aums_id = models.CharField(_('Aums ID'),  max_length=32, blank=False, unique=True)
+    aums_id = models.CharField(_('aums_id'),  max_length=32, blank=False, unique=True,primary_key=True)
     name = models.CharField(_('First Name'), max_length=32, blank=True, null=True)
     curr_course = models.CharField(_('Current Course'), max_length=32, blank=True, null=True,
                                   validators=[RegexValidator(regex='^[A-Za-z]*$')])
