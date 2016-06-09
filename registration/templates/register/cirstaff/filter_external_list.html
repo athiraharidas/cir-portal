@@ -1,0 +1,16 @@
+{% extends "static/base_dash.html" %}
+{% load staticfiles %}
+{% block body %}
+    <div class="container">
+   <div class="templatemo-content">
+       <div style="padding-top: 15px;">
+           <h2 style="text-align: center">External Filter</h2> <br>
+       </div><!--page-header-->
+       <div class="row">
+           {% for item in object_list %}
+         {{ item.name }}
+      {% endfor %}
+       </div>
+   </div>
+</div>
+{% endblock body %}
