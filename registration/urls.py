@@ -23,6 +23,6 @@ urlpatterns = [
     url(r'^list/$', StudentListView.as_view(), name='list'),
     url(r'^profile/edit/(?P<aums_id>[\w|\W]+)/$', StudentListUpdateView.as_view(), name='student_profile_update'),
     url(r'^students/filter/$', TemplateView.as_view(template_name='register/cirstaff/filter_external.html'), name="filter_external"),
-    url(r'^students/filter/external/$', StudentFilterExternalView.as_view(),name="filter_external_list")
-
+    url(r'^students/filter/external/$', StudentFilterExternalView.as_view(),name="filter_external_list"),
+    url(r'^student/tests/technical/$', StudentTechnicalTestEntryView.as_view(), name='technical_test')
 ]
